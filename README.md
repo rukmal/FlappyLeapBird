@@ -41,3 +41,9 @@ limitations under the License.
 ### Leap Motion Integration
 
 See [LICENCE](LICENSE).
+
+## Contact
+
+This is an open source project. Contact me if you have a suggested improvement or fork and send a pull request!
+
+http://rukmal.me
