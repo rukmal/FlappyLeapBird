@@ -1,4 +1,4 @@
-# Floppy Leap Bird
+# Flappy Leap Bird
 
 ## Description
 
