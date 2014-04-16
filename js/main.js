@@ -68,28 +68,33 @@ $(document).ready(function() {
    showSplash();
 });
 
-// Leap motion controls
-var MINTIME = 15000; // microseconds
+
+// Leap Motion Controls
 
 var leap = new Leap.Controller({
 	enableGestures: true
 });
 
 leap.connect();
+var lastGesture = new Date().getTime();
+var gestureDelay = 150; // ms
+var goneUp = true;
 leap.on('frame', function (frame) {
-	var gestureIDs = {};
-	var fingers = frame.fingers;
-	var hands = frame.hands;
-	var gestures = frame.gestures;
-	if (gestures[0]) {
-		if (gestures[0].type === 'swipe') {
-			var swipe = gestures[0];
-			if (!(swipe.id in gestureIDs)) {
-				if (swipe.duration > MINTIME && swipe.direction[1] < 0) {
+	now = new Date().getTime();
+	if(frame.gestures.length > 0 && (now - lastGesture) > gestureDelay) {
+	var gesture = frame.gestures[0];
+
+	if(frame.hands.length > 0) {
+			if( frame.fingers.length > 2 && gesture.type === 'swipe' ) {
+				var y = gesture.direction[1];
+				if(y < 0 && goneUp) {
 					screenClick();
-				}				
-				gestureIDs[swipe.id] = true;
+					goneUp = false;
+				} else {
+					goneUp = true;
+				}
 			}
+			lastGesture = now;
 		}
 	}
 });
