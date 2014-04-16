@@ -1,4 +1,5 @@
-# Floppy Leap Bird
+# Flappy Leap Bird
+![Flappy Leap Bird Logo](bin/FlappyLeapBird_logo.png)
 
 ## Description
 
@@ -11,6 +12,7 @@ For this game to function correctly, the user must have the Leap Motion client a
 ![Leap Motion settings pane](bin/leapsettings.png)
 
 The user will have to make a vertical 'flapping' motion with their hand for the game to register a 'flap' in the game.
+![Flapping demo](bin/flapdemo.gif)
 
 ## Demo
 
