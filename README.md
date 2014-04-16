@@ -16,7 +16,7 @@ The user will have to make a vertical 'flapping' motion with their hand for the 
 
 ## Demo
 
-This application is hosted using Github Pages. To use the live demo, navigate to: http://rukmal.github.io/FloppyLeapBird.
+This application is hosted using Github Pages. To use the live demo, navigate to: http://rukmal.github.io/FlappyLeapBird.
 
 ## Notice
 
