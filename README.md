@@ -1,4 +1,5 @@
 # Flappy Leap Bird
+![Flappy Leap Bird Logo](bin/FlappyLeapBird_logo.png)
 
 ## Description
 
